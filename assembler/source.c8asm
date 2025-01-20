@@ -1,0 +1,19 @@
+    ld reg0 0x5 //"comments"
+    ld reg1 0x5 //"comments"
+    ld regI picture
+
+    cls
+    drw reg0 reg1 5
+jp start
+
+
+
+: picture
+    db 0b11111000
+    db 0b10000100
+    db 0b10010110
+    db 0b10000111
+    db 0b11111100
+
+
+

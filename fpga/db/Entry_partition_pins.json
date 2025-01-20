@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "out_leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7seg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7seg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7seg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7seg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7seg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7seg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7seg[7]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7segDigitSelect[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7segDigitSelect[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7segDigitSelect[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_7segDigitSelect[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_vgaHSync",
+					"strict" : false
+				},
+				{
+					"name" : "out_vgaVSync",
+					"strict" : false
+				},
+				{
+					"name" : "out_vgaRGB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_vgaRGB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "in_keys[0]",
+					"strict" : false
+				},
+				{
+					"name" : "in_keys[1]",
+					"strict" : false
+				},
+				{
+					"name" : "in_keys[2]",
+					"strict" : false
+				},
+				{
+					"name" : "in_keys[3]",
+					"strict" : false
+				},
+				{
+					"name" : "in_clk_50mhz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

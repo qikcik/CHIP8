@@ -1,0 +1,38 @@
+
+State Machine - |Entry|currentState
+Name currentState.TState_BCD2 currentState.TState_BCD1 currentState.TState_SaveReg_Store currentState.TState_SaveReg_PrepareAddress currentState.TState_LoadReg_Store currentState.TState_LoadReg_PrepareAddress currentState.TState_Call currentState.TState_Return currentState.TState_Draw_Increment currentState.TState_Draw_WriteLine currentState.TState_Draw_ReadLine currentState.TState_Cls currentState.TState_Fetch_ParseAndInitOpcode currentState.TState_Fetch_StoreSecondByte currentState.TState_Fetch_StoreFirstByte currentState.TState_Fetch_Begin 
+currentState.TState_Fetch_Begin 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+currentState.TState_Fetch_StoreFirstByte 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+currentState.TState_Fetch_StoreSecondByte 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+currentState.TState_Fetch_ParseAndInitOpcode 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+currentState.TState_Cls 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+currentState.TState_Draw_ReadLine 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+currentState.TState_Draw_WriteLine 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+currentState.TState_Draw_Increment 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+currentState.TState_Return 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+currentState.TState_Call 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+currentState.TState_LoadReg_PrepareAddress 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+currentState.TState_LoadReg_Store 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+currentState.TState_SaveReg_PrepareAddress 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+currentState.TState_SaveReg_Store 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+currentState.TState_BCD1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+currentState.TState_BCD2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Entry|nextState
+Name nextState.TState_BCD2 nextState.TState_BCD1 nextState.TState_SaveReg_Store nextState.TState_SaveReg_PrepareAddress nextState.TState_LoadReg_Store nextState.TState_LoadReg_PrepareAddress nextState.TState_Call nextState.TState_Return nextState.TState_Draw_Increment nextState.TState_Draw_WriteLine nextState.TState_Draw_ReadLine nextState.TState_Cls nextState.TState_Fetch_ParseAndInitOpcode nextState.TState_Fetch_StoreSecondByte nextState.TState_Fetch_StoreFirstByte nextState.TState_Fetch_Begin 
+nextState.TState_Fetch_Begin 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+nextState.TState_Fetch_StoreFirstByte 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+nextState.TState_Fetch_StoreSecondByte 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+nextState.TState_Fetch_ParseAndInitOpcode 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+nextState.TState_Cls 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+nextState.TState_Draw_ReadLine 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+nextState.TState_Draw_WriteLine 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+nextState.TState_Draw_Increment 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+nextState.TState_Return 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+nextState.TState_Call 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+nextState.TState_LoadReg_PrepareAddress 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+nextState.TState_LoadReg_Store 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+nextState.TState_SaveReg_PrepareAddress 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+nextState.TState_SaveReg_Store 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+nextState.TState_BCD1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+nextState.TState_BCD2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

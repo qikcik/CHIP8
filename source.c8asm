@@ -1,0 +1,339 @@
+jp CODE
+
+;"reg9 is reserved for score!"
+
+:CONSTANS
+    :sprite_bird
+        db 0b01110000
+        db 0b11010000
+        db 0b11111000
+        db 0b11110000
+
+    :sprite_bird_accelerate
+        db 0b11110000
+        db 0b11010000
+        db 0b11111000
+        db 0b01110000
+
+    :sprite_pipe
+        db 0b11111111
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+        db 0b01111110
+
+    :sprite_G
+        db 0b11111000
+        db 0b10000000
+        db 0b10011000
+        db 0b10001000
+        db 0b11111000
+
+    :sprite_A
+        db 0b11111000
+        db 0b10001000
+        db 0b11111000
+        db 0b10001000
+        db 0b10001000
+
+    :sprite_M
+        db 0b10001000
+        db 0b11011000
+        db 0b10101000
+        db 0b10001000
+        db 0b10001000
+
+    :sprite_E
+        db 0b11111000
+        db 0b10000000
+        db 0b11110000
+        db 0b10000000
+        db 0b11111000
+
+    :sprite_O
+        db 0b01110000
+        db 0b10001000
+        db 0b10001000
+        db 0b10001000
+        db 0b01110000
+
+    :sprite_V
+        db 0b10001000
+        db 0b10001000
+        db 0b01010000
+        db 0b01010000
+        db 0b00100000
+
+    :sprite_R
+        db 0b11110000
+        db 0b10001000
+        db 0b11110000
+        db 0b10001000
+        db 0b10001000
+        db 0b10001000
+
+:VARIABLES
+    :v_bird
+        db 12   ;"x"
+        db 12   ;"y"
+        db 0    ;"acceleration"
+    :v_pipe_arr
+        :v_pipe_0
+            db 60   ;"x"
+            db 10   ;"top pipeend"
+            db 16   ;"pipe window"
+        :v_pipe_1
+            db 30   ;"x"
+            db 15   ;"top pipeend"
+            db 16   ;"pipe window"
+        :v_pipe_2
+            db 00   ;"x"
+            db 2    ;"top pipeend"
+            db 15   ;"pipe window"
+    :v_bcd_store
+        db 0
+        db 0
+        db 0
+
+:CODE
+    ;"init bird"
+    ld reg0 12
+    ld reg1 12
+    ld reg2 0
+    ld regI v_bird
+    ld *regI upTo reg2
+
+    ld reg0 60   ;"x"
+    ld reg1 10   ;"top pipeend"
+    ld reg2 16   ;"pipe window"
+    ld reg3 30   ;"x"
+    ld reg4 15   ;"top pipeend"
+    ld reg5 16   ;"pipe window"
+    ld reg6 00   ;"x"
+    ld reg7 2    ;"top pipeend"
+    ld reg8 15   ;"pipe window"
+    ld regI v_pipe_arr
+    ld *regI upTo reg8
+
+    ld reg9 0
+
+
+:GAME
+    ;"wait until delayTimer == 0"
+    :main_delay
+        ld reg15 delayTimer
+        se reg15 0
+            jp main_delay
+
+    ;"set delayTime"
+    ld reg15 2
+    ld delayTimer reg15
+
+    cls
+
+    ;"------------------"
+    ;"iterate over pipes"
+
+    ld reg11 0 ;"counter"
+    :loop_iterate_begin
+        ;"regI := v_pipe_arr[reg11]"
+        ld regI v_pipe_arr
+        add regI reg11
+
+        ;"load pipe struct"
+        ld upTo reg2 *regI
+
+        ;"move pipe"
+        ld reg10 1
+        sub reg0 reg10
+
+        ;"regenerate pipe"
+        se reg0 0
+            jp end_regenerate_pipe
+
+            rnd reg1 14
+            add reg1 1 ;"range 1-15"
+            ld reg0 63
+
+            add reg9 1 ;"score"
+
+        :end_regenerate_pipe
+
+        ;"draw top_pipe part"
+        ;"SELF MODIFICABLE CODE"
+
+            ;"copy reg 0 to reg4"
+            ld reg4 reg0
+
+            ld reg0 reg1
+            ld reg3 0x0F    and reg0 reg3
+            ld reg3 0x30    or reg0 reg3
+
+            ld regI drwTop
+            add regI reg10 ;"ofset to second byte"
+            ld *regI upTo reg0 ;"replace second byte"
+
+            ;"revert reg 0"
+            ld reg0 reg4
+
+            ld regI sprite_pipe
+            add regI reg10
+            ld reg3 0
+            :drwTop
+                drw reg0 reg1 0x1 ;"reg3 and 0xF will be replaced"
+
+            ld regI sprite_pipe
+            drw reg0 reg1 0x1 
+
+        ;"draw bottom"
+        ld reg3 reg1 ;"temp y"
+        add reg3 reg2
+
+        ld regI sprite_pipe
+        drw reg0 reg3 15
+
+        ;"regI := v_pipe_arr[reg11]"
+        ld regI v_pipe_0
+        add regI reg11
+
+        ;"save pipe struct"
+        ld *regI upTo reg2
+
+        ;"loop pipes"
+        add reg11 3
+        se reg11 6 ;"each pipe is 3bite long"
+            jp loop_iterate_begin
+
+    ;"--------------------------------"
+    ;"load bird struct"
+    ld regI v_bird
+    ld upTo reg2 *regI
+
+    ;"check if jump"
+    ld reg10 0x01
+    sknp reg10
+        ld reg2 2 ;"set acceleration to 3"
+
+    ;"update y positon"
+    sne reg2 0  jp bird_fall
+        sub reg1 reg2
+        se reg15 1 ;"screen boundry overflow"
+            ld reg1 0
+
+        ;"update acceleration"
+        ld reg10 1
+        sub reg2 reg10
+        se reg15 1 ;"substract overflow"
+            ld reg2 0
+
+        jp bird_fall_end
+    : bird_fall
+        add reg1 1
+        sne reg1 29 ;"screen boundry overflow"
+            ld reg1 28
+    : bird_fall_end
+
+    ;"draw bird"
+    ld regI sprite_bird
+    se reg2 0
+        ld regI sprite_bird_accelerate
+
+    drw reg0 reg1 4
+    sne reg15 1
+        jp GAMEOVER
+
+    ;"save bird struct"
+    ld regI v_bird
+    ld *regI upTo reg2
+
+    jp GAME
+
+: GAMEOVER
+
+    cls
+
+    ld reg0 8
+    ld reg1 8
+
+    ld regI sprite_G
+    drw reg0 reg1 5
+    add reg0 6
+
+    ld regI sprite_A
+    drw reg0 reg1 5
+    add reg0 6
+
+    ld regI sprite_M
+    drw reg0 reg1 5
+    add reg0 6
+
+    ld regI sprite_E
+    drw reg0 reg1 5
+    add reg0 6
+
+    ld regI sprite_O
+    drw reg0 reg1 5
+    add reg0 6
+
+    ld regI sprite_V
+    drw reg0 reg1 5
+    add reg0 6
+
+    ld regI sprite_E
+    drw reg0 reg1 5
+    add reg0 6
+
+    ld regI sprite_R
+    drw reg0 reg1 5
+    add reg0 6
+
+    ; "print score"
+    ld regI v_bcd_store
+    ld *regI bcdOf reg9
+
+    ld upTo reg2 *regI
+
+
+    ld reg3 16
+    ld reg4 24
+
+    ld regI spriteOf reg0
+    drw reg4 reg3 5
+    add reg4 6
+    ld regI spriteOf reg1
+    drw reg4 reg3 5
+    add reg4 6
+    ld regI spriteOf reg2
+    drw reg4 reg3 5
+    add reg4 6
+
+
+
+    ld reg15 30
+    ld delayTimer reg15
+
+
+
+    :gameover_delay
+        ld reg15 delayTimer
+        se reg15 0
+            jp gameover_delay
+
+    ld reg15 keyPress
+
+
+
+jp CODE
