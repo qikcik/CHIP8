@@ -1,5 +1,8 @@
 # CHIP8 project
-Dominik “Qikcik” Rudni k 
+Dominik “Qikcik” Rudnik 
+
+short video presentation:
+[![Youtube showcase](img/video.png)](https://www.youtube.com/watch?v=K1BQPlGRoo8)
 
 ## Introduction
 **Project goal was to:**
@@ -666,6 +669,7 @@ I created code that overwrite DRW instruction opcode, so I could easily use dyna
 
 ## Implementing Hardware Implementation
 As development board I used Altera RZ-EasyFPGA A2.2 with Altera Cyclone EP4CE8E22N8N
+
 ![easyFPGA.png](img/easyFPGA.png)
 
 One of the most reused entity is ClockDivider. I think that name is self-explanatory. {[clockDivider.vhd](../fpga/clockDivider.vhd)}
