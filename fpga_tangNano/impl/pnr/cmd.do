@@ -1,0 +1,18 @@
+-d /home/qik/Documents/CHIP8/fpga_v2/impl/gwsynthesis/fpga_v2.vg
+-p GW1NR-9C-QFN88P-6
+-pn GW1NR-LV9QN88PC6/I5
+-cst /home/qik/Documents/CHIP8/fpga_v2/src/test.cst
+-cfg /home/qik/Documents/CHIP8/fpga_v2/impl/pnr/device.cfg
+-sdc /home/qik/Documents/CHIP8/fpga_v2/src/test.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-convert_sdp32_36_to_sdp16_18
+-place_option 0
+-route_option 0
+-clock_route_order 0
+-correct_hold 1
+-route_maxfan 23
+-global_freq 27.000

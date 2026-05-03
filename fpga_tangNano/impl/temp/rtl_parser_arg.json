@@ -1,0 +1,48 @@
+{
+ "Device" : "GW1NR-9C",
+ "Files" : [
+  {
+   "Library" : "work",
+   "Path" : "/home/qik/Documents/CHIP8/fpga_v2/src/entry.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "/home/qik/Documents/CHIP8/fpga_v2/src/gowin_prom/gowin_prom.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "/home/qik/Documents/CHIP8/fpga_v2/src/gowin_rpll/gowin_rpll.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "/home/qik/Documents/CHIP8/fpga_v2/src/keypad.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "/home/qik/Documents/CHIP8/fpga_v2/src/ram/ram.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "/home/qik/Documents/CHIP8/fpga_v2/src/vgaController.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "/home/qik/Documents/CHIP8/fpga_v2/src/vram/vram.vhd",
+   "Type" : "vhdl"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "/home/qik/Documents/CHIP8/fpga_v2/impl/temp/rtl_parser.result",
+ "Top" : "Entry",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_2019"
+}

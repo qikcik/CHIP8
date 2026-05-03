@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW1NR-9C" package="QFN88P" speed="6" partNumber="GW1NR-LV9QN88PC6/I5"/>
+    <FileList>
+        <File path="/home/qik/Documents/CHIP8/fpga_v2/src/entry.vhd" type="vhdl"/>
+        <File path="/home/qik/Documents/CHIP8/fpga_v2/src/gowin_prom/gowin_prom.vhd" type="vhdl"/>
+        <File path="/home/qik/Documents/CHIP8/fpga_v2/src/gowin_rpll/gowin_rpll.vhd" type="vhdl"/>
+        <File path="/home/qik/Documents/CHIP8/fpga_v2/src/keypad.vhd" type="vhdl"/>
+        <File path="/home/qik/Documents/CHIP8/fpga_v2/src/ram/ram.vhd" type="vhdl"/>
+        <File path="/home/qik/Documents/CHIP8/fpga_v2/src/vgaController.vhd" type="vhdl"/>
+        <File path="/home/qik/Documents/CHIP8/fpga_v2/src/vram/vram.vhd" type="vhdl"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="0"/>
+        <Option type="global_freq" value="27.000"/>
+        <Option type="looplimit" value="2000"/>
+        <Option type="output_file" value="/home/qik/Documents/CHIP8/fpga_v2/impl/gwsynthesis/fpga_v2.vg"/>
+        <Option type="print_all_synthesis_warning" value="0"/>
+        <Option type="ram_rw_check" value="0"/>
+        <Option type="top_module" value="Entry"/>
+        <Option type="vcc" value="1.2"/>
+        <Option type="verilog_language" value="verilog-2001"/>
+        <Option type="vhdl_language" value="vhdl-2019"/>
+    </OptionList>
+</Project>

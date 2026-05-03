@@ -1,0 +1,60 @@
+[
+ {
+  "InstFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/entry.vhd",
+  "InstLine" : 6,
+  "InstName" : "Entry",
+  "ModuleFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/entry.vhd",
+  "ModuleLine" : 6,
+  "ModuleName" : "Entry",
+  "SubInsts" : [
+   {
+    "InstFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/entry.vhd",
+    "InstLine" : 208,
+    "InstName" : "e_vram",
+    "ModuleFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/vram/vram.vhd",
+    "ModuleLine" : 13,
+    "ModuleName" : "Vram"
+   },
+   {
+    "InstFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/entry.vhd",
+    "InstLine" : 233,
+    "InstName" : "e_ram",
+    "ModuleFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/ram/ram.vhd",
+    "ModuleLine" : 6,
+    "ModuleName" : "Ram"
+   },
+   {
+    "InstFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/entry.vhd",
+    "InstLine" : 247,
+    "InstName" : "e_vgaController",
+    "ModuleFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/vgaController.vhd",
+    "ModuleLine" : 5,
+    "ModuleName" : "VgaController"
+   },
+   {
+    "InstFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/entry.vhd",
+    "InstLine" : 288,
+    "InstName" : "e_keypad",
+    "ModuleFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/keypad.vhd",
+    "ModuleLine" : 5,
+    "ModuleName" : "Keypad"
+   },
+   {
+    "InstFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/entry.vhd",
+    "InstLine" : 296,
+    "InstName" : "e_clk",
+    "ModuleFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/gowin_rpll/gowin_rpll.vhd",
+    "ModuleLine" : 13,
+    "ModuleName" : "Gowin_rPLL"
+   }
+  ]
+ },
+ {
+  "InstFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/gowin_prom/gowin_prom.vhd",
+  "InstLine" : 13,
+  "InstName" : "Gowin_pROM",
+  "ModuleFile" : "/home/qik/Documents/CHIP8/fpga_v2/src/gowin_prom/gowin_prom.vhd",
+  "ModuleLine" : 13,
+  "ModuleName" : "Gowin_pROM"
+ }
+]

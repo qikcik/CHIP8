@@ -1,0 +1,55 @@
+GowinSynthesis start
+Running parser ...
+Analyzing VHDL file '/home/qik/TangNano-9K-example/test/src/entry.vhd'
+Analyzing entity 'entry'("/home/qik/TangNano-9K-example/test/src/entry.vhd":6)
+Analyzing architecture 'behaviour'("/home/qik/TangNano-9K-example/test/src/entry.vhd":22)
+Analyzing VHDL file '/home/qik/TangNano-9K-example/test/src/gowin_prom/gowin_prom.vhd'
+Analyzing entity 'gowin_prom'("/home/qik/TangNano-9K-example/test/src/gowin_prom/gowin_prom.vhd":13)
+Analyzing architecture 'behavioral'("/home/qik/TangNano-9K-example/test/src/gowin_prom/gowin_prom.vhd":24)
+Analyzing VHDL file '/home/qik/TangNano-9K-example/test/src/gowin_rpll/gowin_rpll.vhd'
+Analyzing entity 'gowin_rpll'("/home/qik/TangNano-9K-example/test/src/gowin_rpll/gowin_rpll.vhd":13)
+Analyzing architecture 'behavioral'("/home/qik/TangNano-9K-example/test/src/gowin_rpll/gowin_rpll.vhd":20)
+Analyzing VHDL file '/home/qik/TangNano-9K-example/test/src/keypad.vhd'
+Analyzing entity 'keypad'("/home/qik/TangNano-9K-example/test/src/keypad.vhd":5)
+Analyzing architecture 'rtl'("/home/qik/TangNano-9K-example/test/src/keypad.vhd":14)
+Analyzing VHDL file '/home/qik/TangNano-9K-example/test/src/main.vhd'
+Analyzing entity 'main'("/home/qik/TangNano-9K-example/test/src/main.vhd":6)
+Analyzing architecture 'behaviour'("/home/qik/TangNano-9K-example/test/src/main.vhd":19)
+Analyzing VHDL file '/home/qik/TangNano-9K-example/test/src/ram/ram.vhd'
+Analyzing entity 'ram'("/home/qik/TangNano-9K-example/test/src/ram/ram.vhd":6)
+Analyzing architecture 'behavioral'("/home/qik/TangNano-9K-example/test/src/ram/ram.vhd":19)
+Analyzing VHDL file '/home/qik/TangNano-9K-example/test/src/vgaController.vhd'
+Analyzing entity 'vgacontroller'("/home/qik/TangNano-9K-example/test/src/vgaController.vhd":5)
+Analyzing architecture 'behaviour'("/home/qik/TangNano-9K-example/test/src/vgaController.vhd":33)
+Analyzing VHDL file '/home/qik/TangNano-9K-example/test/src/vram/vram.vhd'
+Analyzing entity 'vram'("/home/qik/TangNano-9K-example/test/src/vram/vram.vhd":13)
+Analyzing architecture 'behavioral'("/home/qik/TangNano-9K-example/test/src/vram/vram.vhd":34)
+Processing 'Entry(behaviour)'("/home/qik/TangNano-9K-example/test/src/entry.vhd":6)
+Extracting RAM for identifier 'stack'("/home/qik/TangNano-9K-example/test/src/entry.vhd":155)
+Processing 'Vram(Behavioral)'("/home/qik/TangNano-9K-example/test/src/vram/vram.vhd":13)
+Processing 'Ram(Behavioral)'("/home/qik/TangNano-9K-example/test/src/ram/ram.vhd":6)
+Extracting RAM for identifier 'RAM_BLOCK'("/home/qik/TangNano-9K-example/test/src/ram/ram.vhd":41)
+Processing 'VgaController(pixelfreq=9000000,h_displayarea=480,h_pulsewidth=1,h_backporch=43,h_frontporch=4,v_displayarea=272,v_pulsewidth=1,v_backporch=12,v_frontporch=4)(behaviour)'("/home/qik/TangNano-9K-example/test/src/vgaController.vhd":5)
+Processing 'Keypad(rtl)'("/home/qik/TangNano-9K-example/test/src/keypad.vhd":5)
+'others' clause is never selected("/home/qik/TangNano-9K-example/test/src/keypad.vhd":69)
+Processing 'Gowin_rPLL(Behavioral)'("/home/qik/TangNano-9K-example/test/src/gowin_rpll/gowin_rpll.vhd":13)
+NOTE  (EX0101) : Current top module is "Entry"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "/home/qik/TangNano-9K-example/test/impl/gwsynthesis/test.vg" completed
+[100%] Generate report file "/home/qik/TangNano-9K-example/test/impl/gwsynthesis/test_syn.rpt.html" completed
+GowinSynthesis finish

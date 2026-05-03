@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="Entry" Register="534" Alu="277" Lut="2641" Ssram="3" T_Register="591(534)" T_Alu="312(277)" T_Lut="2691(2641)" T_Bsram="20(0)" T_Ssram="3(3)">
+ <SubModule name="e_vram" Bsram="4" T_Bsram="4(4)"/>
+ <SubModule name="e_ram" Register="1" Lut="8" Bsram="16" T_Register="1(1)" T_Lut="8(8)" T_Bsram="16(16)"/>
+ <SubModule name="e_vgaController" Register="19" Alu="17" Lut="21" T_Register="19(19)" T_Alu="17(17)" T_Lut="21(21)"/>
+ <SubModule name="e_keypad" Register="37" Alu="18" Lut="21" T_Register="37(37)" T_Alu="18(18)" T_Lut="21(21)"/>
+ <SubModule name="e_clk"/>
+</Module>
